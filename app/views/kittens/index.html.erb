@@ -1,0 +1,20 @@
+<h1>Gotta catch em all. Kittenmon.</h1>
+<%= link_to "Create new Kitten", new_kitten_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Cuteness</th>
+    <th>Softness</th>
+    <th></th>
+  </tr>
+  <% @kittens.each do |kitten| %>
+    <tr>
+      <td><%= link_to "#{kitten.name}", kitten_path(kitten) %></td>
+      <td><%= kitten.age %></td>
+      <td><%= kitten.cuteness %></td>
+      <td><%= kitten.softness %></td>
+      <td><%= link_to "Die Kitteh", kitten, method: :delete %></td>
+    </tr>
+  <% end %>
+</table>

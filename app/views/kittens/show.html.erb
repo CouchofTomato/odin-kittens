@@ -1,0 +1,7 @@
+<h1>Page for <%= @kitten.name %></h1>
+<div>
+  <p>Age: <%= @kitten.age %></p>
+  <p>Cuteness: <%= @kitten.cuteness %></p>
+  <p>Softness: <%= @kitten.softness %></p>
+  <p><%= link_to "Banish this motherfucker", @kitten, method: :delete %></p>
+</div>
